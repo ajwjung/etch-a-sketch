@@ -1,12 +1,13 @@
 const container = document.querySelector(".container");
+const changeSizeButton = document.querySelector("#change-grid");
 
-function createGrid() {
-    for (let i = 0; i < 16; i++) {
+function createGrid(rows, cols) {   
+    for (let i = 0; i < rows; i++) {
         const row = document.createElement("div");
         row.className = "row";
         container.appendChild(row);
-    
-        for (let j = 0; j < 16; j++) {
+        
+        for (let j = 0; j < cols; j++) {
             const box = document.createElement("div");
             box.className = "box";
             changeColorOnHover(box);
@@ -24,4 +25,17 @@ function changeColorOnHover(item) {
     })
 }
 
-createGrid();
+function removeGrid() {
+    container.replaceChildren();
+}
+
+// Default grid size: 16x16
+createGrid(16, 16);
+
+// Change grid size
+changeSizeButton.addEventListener("click", function (e) { 
+    let size = parseInt(prompt("How many squares?"))
+    
+    removeGrid();
+    createGrid(size, size);
+    })
