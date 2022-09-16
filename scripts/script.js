@@ -1,5 +1,6 @@
 const container = document.querySelector(".container");
 const changeSizeButton = document.querySelector("#change-grid");
+const resetButton = document.querySelector("#reset");
 
 function createGrid(rows, cols) {   
     for (let i = 0; i < rows; i++) {
@@ -39,3 +40,8 @@ changeSizeButton.addEventListener("click", function (e) {
     removeGrid();
     createGrid(size, size);
     })
+
+resetButton.addEventListener("click", function (e) {
+    removeGrid();
+    createGrid(16, 16);
+})
