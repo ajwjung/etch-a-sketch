@@ -36,9 +36,13 @@ createGrid(16, 16);
 // Change grid size
 changeSizeButton.addEventListener("click", function (e) { 
     let size = parseInt(prompt("How many squares?"))
+    if (size <= 100) {
+        removeGrid();
+        createGrid(size, size);
+    } else {
+        alert("ERROR: Maximum squares allowed is 100.")
+    }
     
-    removeGrid();
-    createGrid(size, size);
     })
 
 resetButton.addEventListener("click", function (e) {
