@@ -1,4 +1,23 @@
-.container {
+body {
+    margin: 0 auto;
+}
+
+.content-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.btn-container {
+    width: 60vw;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.grid-container {
     height: 600px;
     width: 600px;
     display: flex;
