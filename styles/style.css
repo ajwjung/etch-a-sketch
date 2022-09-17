@@ -35,9 +35,9 @@ h1 {
     height: 50px;
     width: 200px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
 }
 
 #change-grid,
