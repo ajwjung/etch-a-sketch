@@ -19,7 +19,7 @@ function createGrid(size) {
             box.className = "box";
             box.style.height = `${boxHeight / size}px`;
             box.style.width = `${boxWidth / size}px`;
-            box.style.border = "1px dotted gray";
+            box.style.border = "1px dotted rgb(200, 200, 200)";
             box.style.boxSizing = "border-box";
             changeColorOnHover(box);
             row.appendChild(box);
