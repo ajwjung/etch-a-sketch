@@ -2,15 +2,24 @@ const container = document.querySelector(".container");
 const changeSizeButton = document.querySelector("#change-grid");
 const resetButton = document.querySelector("#reset");
 
-function createGrid(rows, cols) {   
-    for (let i = 0; i < rows; i++) {
+function createGrid(size) {
+    let boxHeight = container.offsetHeight;
+    let boxWidth = container.offsetWidth;
+
+    for (let i = 0; i < size; i++) {
         const row = document.createElement("div");
         row.className = "row";
+        row.style.height = boxHeight;
+        row.style.width = boxWidth;
         container.appendChild(row);
         
-        for (let j = 0; j < cols; j++) {
+        for (let j = 0; j < size; j++) {
             const box = document.createElement("div");
             box.className = "box";
+            box.style.height = `${boxHeight / size}px`;
+            box.style.width = `${boxWidth / size}px`;
+            box.style.border = "1px dotted gray";
+            box.style.boxSizing = "border-box";
             changeColorOnHover(box);
             row.appendChild(box);
         }
@@ -35,16 +44,16 @@ createGrid(16, 16);
 
 // Change grid size
 changeSizeButton.addEventListener("click", function (e) { 
-    let size = parseInt(prompt("How many squares?"))
+    let size = parseInt(prompt("How many squares?"));
     if (size <= 100) {
         removeGrid();
-        createGrid(size, size);
+        createGrid(size);
     } else {
-        alert("ERROR: Maximum squares allowed is 100.")
+        alert("ERROR: Maximum squares allowed is 100.");
     }
-    
-    })
+})
 
+// Reset to default grid
 resetButton.addEventListener("click", function (e) {
     removeGrid();
     createGrid(16, 16);
