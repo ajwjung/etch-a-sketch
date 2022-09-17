@@ -40,7 +40,7 @@ function removeGrid() {
 }
 
 // Default grid size: 16x16
-createGrid(16, 16);
+createGrid(16);
 
 // Change grid size
 changeSizeButton.addEventListener("click", function (e) { 
@@ -60,5 +60,5 @@ changeSizeButton.addEventListener("click", function (e) {
 // Reset to default grid
 resetButton.addEventListener("click", function (e) {
     removeGrid();
-    createGrid(16, 16);
+    createGrid(16);
 })
