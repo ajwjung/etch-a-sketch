@@ -17,6 +17,16 @@ body {
     justify-content: space-evenly;
 }
 
+.size-display {
+    height: 50px;
+    width: 200px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
 #change-grid,
 #reset {
     height: 50px;
