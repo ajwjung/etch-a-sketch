@@ -1,6 +1,7 @@
 const container = document.querySelector(".grid-container");
 const changeSizeButton = document.querySelector("#change-grid");
 const resetButton = document.querySelector("#reset");
+const canvasSizeText = document.querySelector("#canvas-dimensions");
 
 function createGrid(size) {
     let boxHeight = container.offsetHeight;
@@ -39,8 +40,10 @@ function removeGrid() {
     container.replaceChildren();
 }
 
+
 // Default grid size: 16x16
 createGrid(16);
+canvasSizeText.textContent = "16 x 16";
 
 // Change grid size
 changeSizeButton.addEventListener("click", function (e) { 
@@ -52,6 +55,7 @@ changeSizeButton.addEventListener("click", function (e) {
     } else if (size <= 100 && size > 0) {
         removeGrid();
         createGrid(size);
+        canvasSizeText.textContent = `${size} x ${size}`;
     } else {
         alert("ERROR: You must enter a number between 1 and 100.");
     }
