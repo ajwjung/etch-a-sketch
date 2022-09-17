@@ -19,6 +19,7 @@ function createGrid(size) {
             box.className = "box";
             box.style.height = `${boxHeight / size}px`;
             box.style.width = `${boxWidth / size}px`;
+            box.style.backgroundColor = "rgb(250, 248, 240)";
             box.style.border = "1px dotted rgb(200, 200, 200)";
             box.style.boxSizing = "border-box";
             changeColorOnHover(box);
@@ -32,7 +33,7 @@ function changeColorOnHover(item) {
         item.style.backgroundColor = "rgb(25, 50, 100)";
     })
     item.addEventListener("mouseout", function (e) {
-        item.style.backgroundColor = "transparent";
+        item.style.backgroundColor = "rgb(250, 248, 240)";
     })
 }
 
