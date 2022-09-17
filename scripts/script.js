@@ -1,4 +1,4 @@
-const container = document.querySelector(".container");
+const container = document.querySelector(".grid-container");
 const changeSizeButton = document.querySelector("#change-grid");
 const resetButton = document.querySelector("#reset");
 
@@ -46,7 +46,7 @@ createGrid(16, 16);
 changeSizeButton.addEventListener("click", function (e) { 
     let userInput = prompt("Please enter a number between 1 and 100.");
     let size = parseInt(userInput);
-    
+
     if (userInput === null) {
         return;
     } else if (size <= 100 && size > 0) {

@@ -6,13 +6,24 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles/style.css">
         <script src="scripts/script.js" defer></script>
-        <title>Etch-A-Sketch</title>
+        <title>Etch-a-Sketch</title>
     </head>
 
     <body>
-        <button id="change-grid">Change grid size</button>
-        <button id="reset">Reset</button>
+        <div class="content-container">
+            <h1>Etch-a-Sketch</h1>
 
-        <div class="container"></div>
+            <div class="btn-container">
+                <div class="size-display">
+                    <span>Canvas size: </span>
+                    <span id="canvas-dimensions"></span>
+                </div>
+
+                <button id="change-grid">Resize Canvas</button>
+                <button id="reset">Reset</button>
+            </div>
+    
+            <div class="grid-container"></div>
+        </div>
     </body>
 </html>
