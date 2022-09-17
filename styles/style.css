@@ -25,7 +25,7 @@ h1 {
 }
 
 .btn-container {
-    width: 60vw;
+    width: 600px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
