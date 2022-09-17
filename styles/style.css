@@ -1,5 +1,17 @@
+body,
+button {
+    font-family: "Silkscreen", "Gloria Hallelujah", sans-serif;
+    font-size: 18px;
+}
+
 body {
     margin: 0 auto;
+}
+
+h1 {
+    font-family: "Cabin Sketch", "Gloria Hallelujah", sans-serif;
+    font-size: 60px;
+    margin: 10px;
 }
 
 .content-container {
@@ -20,7 +32,7 @@ body {
 .size-display {
     height: 50px;
     width: 200px;
-    font-size: 18px;
+    /* font-size: 18px; */
     display: flex;
     justify-content: center;
     align-items: center;
