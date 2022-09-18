@@ -60,6 +60,13 @@ h1 {
     font-size: 20px;
 }
 
+#change-grid:hover,
+#reset:hover,
+#help:hover {
+    background-color:rgb(156, 120, 255);
+    box-shadow: 2px 4px 2px rgb(208, 198, 235)
+}
+
 #change-grid:active,
 #reset:active,
 #help:active {
