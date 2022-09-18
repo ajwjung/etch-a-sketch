@@ -2,6 +2,9 @@ const container = document.querySelector(".grid-container");
 const changeSizeButton = document.querySelector("#change-grid");
 const resetButton = document.querySelector("#reset");
 const canvasSizeText = document.querySelector("#canvas-dimensions");
+const infoButton = document.querySelector("#help");
+const infoBox = document.querySelector(".info-box");
+const closeInfoBox = document.querySelector(".close-info");
 
 function createGrid(size) {
     let boxHeight = container.offsetHeight;
@@ -63,4 +66,17 @@ changeSizeButton.addEventListener("click", function (e) {
 resetButton.addEventListener("click", function (e) {
     removeGrid();
     createGrid(16);
+})
+
+// Toggle info box
+infoButton.addEventListener("click", function(e) {
+    infoBox.classList.add("show");
+    infoButton.disabled = true;
+
+    if (infoBox.classList.contains("show")) {
+        closeInfoBox.addEventListener("click", function(e) {
+            infoBox.classList.remove("show");
+            infoButton.disabled = false;
+        })
+    }
 })
