@@ -85,10 +85,31 @@ h1 {
     background:rgb(156, 120, 255);
     border: 3px solid black;
     box-shadow: 2px 4px 2px rgb(208, 198, 235);
-
+    color:rgb(255, 255, 255);
+    box-sizing: border-box;
+    padding: 20px;
+    
     position: absolute;
     z-index: 3;
     display: none;
+}
+
+.info-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-header > h3 {
+    margin: 0px;
+    margin-bottom: 10px;
+}
+
+.close-info {
+    font-weight: 600;
+}
+
+.hide {
+    visibility: hidden;
 }
 
 .show {
