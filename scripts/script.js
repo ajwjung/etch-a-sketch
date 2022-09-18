@@ -32,9 +32,6 @@ function changeColorOnHover(item) {
     item.addEventListener("mouseover", function (e) {
         item.style.backgroundColor = "rgb(25, 50, 100)";
     })
-    item.addEventListener("mouseout", function (e) {
-        item.style.backgroundColor = "rgb(250, 248, 240)";
-    })
 }
 
 function removeGrid() {
