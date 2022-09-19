@@ -1,4 +1,4 @@
-const container = document.querySelector(".grid-container");
+const gridContainer = document.querySelector(".grid-container");
 const changeSizeButton = document.querySelector("#change-grid");
 const clearGridButton = document.querySelector("#clear-grid");
 const resetButton = document.querySelector("#reset");
@@ -8,15 +8,15 @@ const infoBox = document.querySelector(".info-box");
 const closeInfoBox = document.querySelector(".close-info");
 
 function createGrid(size) {
-    let boxHeight = container.offsetHeight;
-    let boxWidth = container.offsetWidth;
+    let boxHeight = gridContainer.offsetHeight;
+    let boxWidth = gridContainer.offsetWidth;
 
     for (let i = 0; i < size; i++) {
         const row = document.createElement("div");
         row.className = "row";
         row.style.height = boxHeight;
         row.style.width = boxWidth;
-        container.appendChild(row);
+        gridContainer.appendChild(row);
         
         for (let j = 0; j < size; j++) {
             const box = document.createElement("div");
@@ -39,7 +39,7 @@ function changeColorOnHover(item) {
 }
 
 function removeGrid() {
-    container.replaceChildren();
+    gridContainer.replaceChildren();
 }
 
 
