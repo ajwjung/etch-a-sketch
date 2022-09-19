@@ -4,6 +4,7 @@ const clearGridButton = document.querySelector("#clear-grid");
 const resetButton = document.querySelector("#reset");
 const canvasSizeText = document.querySelector("#canvas-dimensions");
 const infoButton = document.querySelector("#help");
+const backdrop = document.querySelector(".backdrop");
 const infoBox = document.querySelector(".info-box");
 const closeInfoBox = document.querySelector(".close-info");
 
@@ -34,7 +35,7 @@ function createGrid(size) {
 
 function changeColorOnHover(item) {
     item.addEventListener("mouseover", function (e) {
-        item.style.backgroundColor = "rgb(25, 50, 100)";
+        item.style.backgroundColor = "rgb(25, 25, 25)";
     })
 }
 
@@ -81,10 +82,12 @@ clearGridButton.addEventListener("click", function (e) {
 // Toggle info box
 infoButton.addEventListener("click", function(e) {
     infoBox.classList.add("show");
+    backdrop.classList.add("show");
     infoButton.disabled = true;
 
     if (infoBox.classList.contains("show")) {
         closeInfoBox.addEventListener("click", function(e) {
+            backdrop.classList.remove("show")
             infoBox.classList.remove("show");
             infoButton.disabled = false;
         })
