@@ -33,7 +33,7 @@ h1 {
 
 .size-display {
     height: 50px;
-    width: 200px;
+    width: 150px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -41,6 +41,7 @@ h1 {
 }
 
 #change-grid,
+#clear-grid,
 #reset,
 #help {
     height: 45px;
@@ -51,6 +52,7 @@ h1 {
 }
 
 #change-grid,
+#clear-grid,
 #reset {
     width: 100px;
 }
@@ -61,6 +63,7 @@ h1 {
 }
 
 #change-grid:hover,
+#clear-grid:hover,
 #reset:hover,
 #help:hover {
     background-color:rgb(156, 120, 255);
@@ -68,6 +71,7 @@ h1 {
 }
 
 #change-grid:active,
+#clear-grid:active,
 #reset:active,
 #help:active {
     transform: translate(1px, 2px);
