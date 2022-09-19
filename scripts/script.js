@@ -1,5 +1,6 @@
 const container = document.querySelector(".grid-container");
 const changeSizeButton = document.querySelector("#change-grid");
+const clearGridButton = document.querySelector("#clear-grid");
 const resetButton = document.querySelector("#reset");
 const canvasSizeText = document.querySelector("#canvas-dimensions");
 const infoButton = document.querySelector("#help");
@@ -66,6 +67,15 @@ changeSizeButton.addEventListener("click", function (e) {
 resetButton.addEventListener("click", function (e) {
     removeGrid();
     createGrid(16);
+})
+
+// Clear grid
+clearGridButton.addEventListener("click", function (e) {
+    const squares = document.querySelectorAll(".box");
+    
+    squares.forEach(function (e) {
+        e.style.backgroundColor = "rgb(250, 248, 240)";
+    })
 })
 
 // Toggle info box
