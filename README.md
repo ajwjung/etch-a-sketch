@@ -1,10 +1,8 @@
 # Etch-a-Sketch
 
------
+* [Live Demo](https://ajwjung.github.io/etch-a-sketch/)
 
 ## Objective
-
------
 
 To create a browser version of something between a sketchpad and an Etch-A-Sketch. Full details can be found on [The Odin Project's page](https://www.theodinproject.com/lessons/foundations-etch-a-sketch).
 
@@ -25,8 +23,6 @@ To create a browser version of something between a sketchpad and an Etch-A-Sketc
 2. Each pass through, add another 10% of black to it such that after 10 passes, the square is completely black
 
 ## Author's Notes
-
------
 
 This was a really fun project that taught me a lot along the way. There were many features I wanted to implement and struggled with, but eventually figured out. Some of those features include:
 
